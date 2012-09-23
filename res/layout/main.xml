@@ -1,13 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Hello World, HomeActivity"
-    />
-</LinearLayout>
+    android:background="@android:color/darker_gray"
+    android:gravity="top">
+
+    <ImageView
+            android:id="@+id/banner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/banner" />
+
+    <TextView
+            android:id="@+id/welcome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        />
+
+    <Button
+            android:id="@+id/talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:text="Talk" />
+
+    <Button
+            android:id="@+id/listen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner"
+            android:layout_toRightOf="@+id/talk"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:text="Listen" />
+
+    <Button
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner"
+            android:layout_toRightOf="@+id/listen"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:text="Follow" />
+
+</RelativeLayout>
 

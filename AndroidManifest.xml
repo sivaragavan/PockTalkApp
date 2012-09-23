@@ -3,15 +3,48 @@
           package="com.pocktalk"
           android:versionCode="1"
           android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="7"/>
-    <application android:label="@string/app_name">
-        <activity android:name="HomeActivity"
-                  android:label="@string/app_name"
-                android:icon="@drawable/logo">
+    <application android:label="@string/app_name" android:icon="@drawable/logo">
+
+        <activity android:name=".LoginActivity"
+                  android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".HomeActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".TalkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ListenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".FollowActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+
     </application>
-</manifest> 
+    <uses-sdk android:minSdkVersion="7"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>
