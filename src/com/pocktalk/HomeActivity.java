@@ -39,15 +39,15 @@ public class HomeActivity extends Activity implements OnClickListener {
         switch (v.getId()) {
 
             case R.id.talk:
-                intentToGo = new Intent(this,TalkActivity.class);
+                intentToGo.setClass(this, TalkActivity.class);
                 break;
 
             case R.id.listen:
-                intentToGo = new Intent(this,ListenActivity.class);
+                intentToGo.setClass(this,ListenActivity.class);
                 break;
 
             case R.id.follow:
-                intentToGo = new Intent(this,FollowActivity.class);
+                intentToGo.setClass(this,FollowActivity.class);
                 break;
 
         }

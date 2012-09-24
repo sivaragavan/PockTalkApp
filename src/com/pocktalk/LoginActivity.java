@@ -33,7 +33,6 @@ public class LoginActivity extends Activity {
 
         findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
 
-            @Override
             public void onClick(View arg0) {
 
                 final String email = ((EditText) findViewById(R.id.email)).getText().toString();
