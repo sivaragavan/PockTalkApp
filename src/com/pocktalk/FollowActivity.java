@@ -37,21 +37,28 @@ public class FollowActivity extends Activity {
 
                 	Log.e("Testing API",response.toString());
                 	
-                    JSONObject content = new JSONObject(response);
+                    /*JSONObject content = new JSONObject(response);*/
+                	JSONArray content = new JSONArray(response);
 
                     Log.e("Testing API", content.toString());
                     
-                    JSONArray userIdJSONArray = content.getJSONArray("userId");
-                    JSONArray emailJSONArray = content.getJSONArray("email");
+                    /*JSONArray userIdJSONArray = content.getJSONArray("userId");
+                    JSONArray emailJSONArray = content.getJSONArray("email");*/
 
                     ArrayList emailArray = new ArrayList();
                     ListView emaillist = (ListView) findViewById(R.id.userlist);
-                    ArrayAdapter<String> emailAdapter = new ArrayAdapter<String>(FollowActivity.this,R.layout.listrow,emailArray);
-                    for (int i= 0; i < emailJSONArray.length(); i++)
+                    ArrayAdapter<String> emailAdapter = new ArrayAdapter<String>(FollowActivity.this,R.layout.listrow,R.id.listrowText,emailArray);
+                    /*for (int i= 0; i < emailJSONArray.length(); i++)
                     {
                     	emailAdapter.add(emailJSONArray.getJSONObject(i).toString());
                     	Log.e("Email ", emailJSONArray.getJSONObject(i).toString());
+                    }*/
+                    for (int i= 0; i < content.length(); i++)
+                    {
+                    	emailAdapter.add(content.getJSONObject(i).getString("email"));
+                    	Log.e("Email ", content.getJSONObject(i).getString("email"));
                     }
+                    
                     
                     emaillist.setAdapter(emailAdapter);
                     
