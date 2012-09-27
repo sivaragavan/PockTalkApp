@@ -8,10 +8,14 @@ public class URLHelper {
 		return BASE_URL + "user/login?email=" + email;
 	}
 
-	public static String list(String userId) {
-		return BASE_URL + "api/list?userId=" + userId;
-	}
+	/*public static String list(String userId) {
+		return BASE_URL + "user/list?userId=" + userId;
+	}*/
 
+	public static String list(String userId) {
+		return BASE_URL + "user/list";
+	}
+	
 	public static String add(String userId, String url) {
 		return BASE_URL + "api/add?userId=" + userId + "&url=" + url;
 	}
